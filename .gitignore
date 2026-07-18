@@ -1,0 +1,21 @@
+# Node & Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Python & Backend
+backend/__pycache__/
+*.pyc
+*.db
+*.sqlite
+*.sqlite3
+
+# Media & Videos
+*.webp
+*.mp4
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
