@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #005a36;
+  --primary-hover: #004529;
+  --primary-light: #e6f2ec;
+  --secondary: #1e293b;
+  --accent: #0284c7;
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+
+  /* Risk status colors */
+  --risk-low-bg: #f0fdf4;
+  --risk-low-text: #15803d;
+  --risk-low-border: #bbf7d0;
+
+  --risk-med-bg: #fffbeb;
+  --risk-med-text: #b45309;
+  --risk-med-border: #fef08a;
+
+  --risk-high-bg: #fef2f2;
+  --risk-high-text: #b91c1c;
+  --risk-high-border: #fecaca;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--secondary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-nabard-green {
+  background-color: var(--primary);
+}
+
+.text-nabard-green {
+  color: var(--primary);
+}
+
+.border-nabard-green {
+  border-color: var(--primary);
+}
+
+.badge-risk-low {
+  background-color: var(--risk-low-bg);
+  color: var(--risk-low-text);
+  border: 1px solid var(--risk-low-border);
+}
+
+.badge-risk-medium {
+  background-color: var(--risk-med-bg);
+  color: var(--risk-med-text);
+  border: 1px solid var(--risk-med-border);
+}
+
+.badge-risk-high {
+  background-color: var(--risk-high-bg);
+  color: var(--risk-high-text);
+  border: 1px solid var(--risk-high-border);
+}
+
+/* Print Styles for Credit Risk Report */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-credit-report, #printable-credit-report * {
+    visibility: visible;
+  }
+  #printable-credit-report {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
